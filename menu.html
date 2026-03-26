@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | La Locanda dell'Elfo</title>
+  <meta name="description" content="Scopri il menu della Locanda dell'Elfo: antipasti, primi, secondi e dolci ispirati alla tradizione pugliese.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Fraunces:opsz,wght@9..144,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="La Locanda dell'Elfo home">
+        <img class="brand-logo" src="assets/img/logo.jpg" alt="Logo La Locanda dell'Elfo" width="48" height="48">
+        <span class="brand-name">La Locanda dell'Elfo</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Apri menu" data-label-open="Apri menu" data-label-close="Chiudi menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="nav" class="nav" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#menu">Piatti</a></li>
+          <li><a href="#prenotazioni">Prenota</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="section menu-hero">
+      <div class="container menu-hero-shell">
+        <div class="surface-panel menu-hero-copy reveal">
+          <span class="eyebrow">Menu</span>
+          <h1>Un menu piu leggibile, piu atmosferico, piu contemporaneo.</h1>
+          <p>Ho trasformato la pagina da semplice lista a una vera esperienza di consultazione, con sezioni piu chiare, gerarchia migliore e una presenza visiva piu forte.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#menu">Esplora le categorie</a>
+            <a class="btn btn-outline-green" href="#prenotazioni">Prenota il tuo tavolo</a>
+          </div>
+        </div>
+
+        <div class="surface-panel menu-hero-visual reveal-img delay-1">
+          <img src="assets/img/scoglio2.jpeg" alt="Piatto della Locanda dell'Elfo">
+          <div class="menu-hero-note">
+            <strong>Cucina pugliese, ritmo piu attuale.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="container">
+        <header class="section-head center reveal">
+          <span class="eyebrow">Le categorie</span>
+          <h2>Tradizione, mare, pasta fresca e dolci finali.</h2>
+          <p class="lead">Mantengo la pagina leggera e statica, ma con un impianto visivo piu solido e piu vicino all'identita del locale.</p>
+        </header>
+
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <section id="prenotazioni" class="section">
+      <div class="container reservation-grid">
+        <div class="surface-panel reservation-panel reveal">
+          <span class="eyebrow">Prenotazioni</span>
+          <h2>Se il piatto convince, il passo dopo deve essere immediato.</h2>
+          <p>Per questo la chiusura della pagina menu porta subito all'azione: pochi elementi, ben scanditi, senza rumore.</p>
+          <div class="reservation-notes">
+            <div><strong>Telefono:</strong> +39 329 325 7911</div>
+            <div><strong>Email:</strong> prenotazioni@lalocandadellelfo.it</div>
+            <div><strong>Indirizzo:</strong> Strada dei Gesuiti, 28/30 - Bari</div>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-secondary" href="https://wa.me/393293257911" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-primary" href="index.html#contatti">Vai ai contatti</a>
+          </div>
+        </div>
+
+        <div class="map-card reveal-img delay-1">
+          <iframe title="Mappa La Locanda dell'Elfo" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Strada%20dei%20Gesuiti%2028%20Bari&output=embed" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> La Locanda dell'Elfo - Strada dei Gesuiti 28/30 - Bari</p>
+      <ul class="social">
+        <li><a href="https://instagram.com/lalocandadellelfo" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://facebook.com/lalocandadellelfo" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://tiktok.com/@lalocandadellelfo" target="_blank" rel="noopener">TikTok</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const menuData = [
+        {
+          title: "Antipasti",
+          subtitle: "Aperture di tavola pensate per condividere e mettere subito il tono giusto.",
+          items: [
+            { name: "Bruschette", description: "Pane tostato, pomodoro e olio extravergine.", price: "8 EUR" },
+            { name: "Polpette", description: "Morbide, saporite, con cottura da cucina di casa.", price: "10 EUR" },
+            { name: "Verdure grigliate", description: "Selezione di stagione con condimento essenziale.", price: "12 EUR" }
+          ]
+        },
+        {
+          title: "Primi",
+          subtitle: "La parte piu identitaria del menu, tra tradizione barese e piatti di mare.",
+          items: [
+            { name: "Orecchiette alle cime di rapa", description: "Una firma pugliese netta e immediata.", price: "10 EUR" },
+            { name: "Lasagne al forno", description: "Stratificate, avvolgenti, da domenica lenta.", price: "12 EUR" },
+            { name: "Risotto allo zafferano", description: "Piu morbido e delicato, con profumo elegante.", price: "11 EUR" }
+          ]
+        },
+        {
+          title: "Secondi",
+          subtitle: "Carne e pesce con una presentazione piu pulita e piu contemporanea.",
+          items: [
+            { name: "Tagliata di manzo", description: "Cottura precisa e gusto pieno.", price: "19 EUR" },
+            { name: "Pesce fresco del giorno", description: "Disponibilita variabile secondo mercato.", price: "18 EUR" },
+            { name: "Pollo alla puttanesca", description: "Un piatto deciso, diretto, senza compromessi.", price: "14 EUR" }
+          ]
+        },
+        {
+          title: "Dolci",
+          subtitle: "Finale semplice, classico e rassicurante.",
+          items: [
+            { name: "Tiramisu", description: "Cremoso e bilanciato.", price: "6 EUR" },
+            { name: "Panna cotta", description: "Morbida, fresca, essenziale.", price: "5 EUR" },
+            { name: "Gelato artigianale", description: "Perfetto per chiudere con leggerezza.", price: "5 EUR" }
+          ]
+        }
+      ];
+
+      const grid = document.getElementById("menuGrid");
+      if (!grid) return;
+
+      menuData.forEach((section, sectionIndex) => {
+        const article = document.createElement("article");
+        article.className = "menu-card reveal";
+        if (sectionIndex % 2 === 1) article.classList.add("delay-1");
+
+        const header = document.createElement("div");
+        header.className = "menu-card-header";
+
+        const title = document.createElement("h3");
+        title.className = "menu-title";
+        title.textContent = section.title;
+
+        const subtitle = document.createElement("p");
+        subtitle.className = "menu-subtitle";
+        subtitle.textContent = section.subtitle;
+
+        const list = document.createElement("dl");
+        list.className = "menu-list";
+
+        section.items.forEach((item) => {
+          const row = document.createElement("div");
+          row.className = "menu-row";
+
+          const dt = document.createElement("dt");
+          const strong = document.createElement("strong");
+          strong.textContent = item.name;
+          const span = document.createElement("span");
+          span.textContent = item.description;
+          dt.appendChild(strong);
+          dt.appendChild(span);
+
+          const dd = document.createElement("dd");
+          dd.textContent = item.price;
+
+          row.appendChild(dt);
+          row.appendChild(dd);
+          list.appendChild(row);
+        });
+
+        header.appendChild(title);
+        header.appendChild(subtitle);
+        article.appendChild(header);
+        article.appendChild(list);
+        grid.appendChild(article);
+      });
+
+      requestAnimationFrame(() => {
+        grid.querySelectorAll(".menu-card").forEach((card) => card.classList.add("visible"));
+      });
+    })();
+  </script>
+</body>
+</html>
