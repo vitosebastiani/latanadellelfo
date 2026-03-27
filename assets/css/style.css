@@ -122,6 +122,17 @@ h4,
   font-family: "Fraunces", serif;
 }
 
+
+.stat-value a {
+    text-decoration: none;
+}
+
+
+.stat-value a:hover {
+    color: #ff6600;
+}
+
+
 h1,
 h2,
 h3,
@@ -157,6 +168,10 @@ p {
 
 .center {
   text-align: center;
+}
+
+.center .lead {
+  margin-inline: auto;
 }
 
 .site-header {
@@ -881,35 +896,16 @@ p {
 }
 
 .menu-hero-shell {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
-  gap: 1.5rem;
-}
-
-.menu-hero-copy,
-.menu-hero-visual {
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-}
-
-.menu-hero-copy {
-  padding: clamp(2rem, 4vw, 3.5rem);
-}
-
-.menu-hero-copy h1 {
-  font-size: clamp(2.8rem, 6vw, 5.2rem);
-  line-height: 0.94;
-  margin-bottom: 1rem;
-}
-
-.menu-hero-copy p {
-  color: var(--muted);
-  font-size: 1.1rem;
+  display: block;
 }
 
 .menu-hero-visual {
   position: relative;
-  min-height: 26rem;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  min-height: 18rem;
+  max-height: 24rem;
+  padding: 0;
 }
 
 .menu-hero-visual img {
@@ -920,12 +916,26 @@ p {
 
 .menu-hero-note {
   position: absolute;
-  right: 1rem;
+  left: 1rem;
   bottom: 1rem;
-  padding: 1rem 1.15rem;
+  max-width: min(22rem, calc(100% - 2rem));
+  padding: 0.95rem 1.1rem;
   border-radius: var(--radius-md);
-  background: rgba(16, 24, 20, 0.7);
+  background: rgba(16, 24, 20, 0.68);
   color: #fff8ef;
+}
+
+.menu-hero-note strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.menu-hero-note p {
+  margin-bottom: 0;
+  color: rgba(255, 248, 237, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.5;
 }
 
 .menu-grid {
@@ -1072,7 +1082,7 @@ p {
   .hero-card img,
   .story-main-image,
   .menu-hero-visual {
-    min-height: 24rem;
+    min-height: 16rem;
   }
 
   .story-copy {
