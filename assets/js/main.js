@@ -120,10 +120,10 @@ if (revealTargets.length) {
           src: "assets/img/people/DA.jpeg"
         },
         {
-          name: "Giulia P.",
+          name: "Vito U.",
           designation: "5 stelle - cliente soddisfatta",
           quote: "Pasta fatta bene, prezzi chiari e una bella energia complessiva. Anche la sezione recensioni adesso sembra parte del brand.",
-          src: "assets/img/locanda.jpeg"
+          src: "assets/img/people/ubaldini.gif"
         }
       ]
     : [
@@ -140,10 +140,10 @@ if (revealTargets.length) {
           src: "assets/img/people/DA.jpeg"
         },
         {
-          name: "Giulia P.",
+          name: "Vito U.",
           designation: "5 stars - happy customer",
           quote: "Great handmade pasta, clear pricing, and a stronger sense of place. Even the reviews section now feels branded instead of generic.",
-          src: "assets/img/locanda.jpeg"
+          src: "assets/img/people/ubaldini.gif"
         }
       ];
 
