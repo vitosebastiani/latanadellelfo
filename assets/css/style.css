@@ -722,9 +722,13 @@ p {
 .story-visual {
   position: relative;
   min-height: 38rem;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
 }
 
 .story-main-image {
+  width: 100%;
+  height: 100%;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
 }
@@ -737,6 +741,10 @@ p {
   border-radius: var(--radius-md);
   background: rgba(10, 23, 17, 0.72);
   backdrop-filter: blur(16px);
+}
+
+.story-visual::after {
+  border-radius: var(--radius-xl);
 }
 
 .story-copy {
@@ -1287,6 +1295,16 @@ p {
     padding-left: 0;
   }
 
+  .story-visual {
+    min-height: auto;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+  }
+
+  .story-visual::after {
+    border-radius: var(--radius-xl);
+  }
+
   .signature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1477,6 +1495,16 @@ p {
   .quote-mark {
     font-size: 3.6rem;
     right: 1rem;
+  }
+
+  .story-main-image {
+    min-height: 22rem;
+  }
+
+  .story-floating-card {
+    right: 1rem;
+    bottom: 1rem;
+    width: min(18rem, calc(100% - 2rem));
   }
 
   .menu-row {
