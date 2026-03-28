@@ -45,6 +45,61 @@ for (const link of document.querySelectorAll('a[href^="#"]')) {
   });
 }
 
+(() => {
+  const navElement = document.querySelector(".nav");
+  if (!navElement) return;
+
+  const pageLinks = Array.from(navElement.querySelectorAll('a[href^="#"]'));
+  if (!pageLinks.length) return;
+
+  const linkMap = new Map();
+  const sections = [];
+
+  pageLinks.forEach((link) => {
+    const id = link.getAttribute("href").slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    linkMap.set(id, link);
+    sections.push(target);
+  });
+
+  if (!sections.length) return;
+
+  const setActive = (id) => {
+    pageLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+    });
+  };
+
+  const updateActiveSection = () => {
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (documentHeight - scrollBottom <= 24) {
+      setActive(sections[sections.length - 1].id);
+      return;
+    }
+
+    const marker = window.innerHeight * 0.38;
+    let current = sections[0].id;
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= marker) {
+        current = section.id;
+      }
+    });
+
+    setActive(current);
+  };
+
+  updateActiveSection();
+  window.addEventListener("scroll", updateActiveSection, { passive: true });
+  window.addEventListener("resize", updateActiveSection);
+  window.addEventListener("hashchange", updateActiveSection);
+})();
+
 const year = document.getElementById("year");
 if (year) {
   year.textContent = new Date().getFullYear();
