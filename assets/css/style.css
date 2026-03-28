@@ -168,6 +168,10 @@ p {
   margin-inline: auto;
 }
 
+.center .lead {
+  margin-inline: auto;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
