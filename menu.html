@@ -30,7 +30,7 @@
       <nav id="nav" class="nav" aria-label="Navigazione principale">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#menu">Piatti</a></li>
+          <li><a href="#menu">Menu</a></li>
           <li><a href="#prenotazioni">Prenota</a></li>
         </ul>
       </nav>
@@ -38,13 +38,56 @@
   </header>
 
   <main id="contenuto">
-  
+    <section class="menu-hero">
+      <div class="container menu-hero-shell">
+        <div class="menu-hero-copy reveal">
+          <span class="hero-note">Menu della casa</span>
+          <span class="eyebrow">Sapori pugliesi</span>
+          <h1>Un menu moderno, caldo e leggibile come una sala ben apparecchiata.</h1>
+          <p>La pagina menu adotta la nuova identita del sito con superfici verde bosco, accenti avorio e box eleganti. Il ritmo resta modulare e ordinato, ma ogni categoria acquista piu presenza attraverso fotografie, gerarchia tipografica e micro animazioni leggere.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#menu">Sfoglia i piatti</a>
+            <a class="btn btn-secondary" href="#prenotazioni">Prenota ora</a>
+          </div>
+        </div>
+
+        <div class="menu-hero-visual reveal-img delay-1 parallax-soft">
+          <img src="assets/img/scoglio2.jpeg" alt="Piatto di mare della Locanda dell'Elfo">
+          <div class="menu-hero-note">
+            <strong>Tradizione barese, taglio editoriale.</strong>
+            <span>Descrizioni essenziali, prezzi chiari, griglia flessibile per desktop, tablet e mobile.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container menu-showcase">
+        <div class="surface-panel menu-showcase-copy reveal">
+          <span class="eyebrow">Atmosfera del menu</span>
+          <h2>Piatti raccontati con precisione, spazio e luce.</h2>
+          <p>Ogni categoria usa box morbidi ma non eccessivi, divisori raffinati, thumbnail fotografiche e un tono cromatico coerente con il resto del sito. La lettura e immediata, l'impatto piu alto, l'identita piu solida.</p>
+          <div class="menu-signals">
+            <div class="menu-signal"><strong>Desktop:</strong> impianto a due colonne con accenti fotografici.</div>
+            <div class="menu-signal"><strong>Tablet:</strong> lettura in doppia colonna con spazi generosi.</div>
+            <div class="menu-signal"><strong>Mobile:</strong> stack verticale elegante, prezzi chiari e contenuti ariosi.</div>
+          </div>
+        </div>
+
+        <div class="menu-visual-stack reveal-img delay-1">
+          <div class="menu-shot tall"><img src="assets/img/polpo.jpeg" alt="Polpo alla griglia"></div>
+          <div class="menu-shot"><img src="assets/img/cozze.png" alt="Saute di cozze"></div>
+          <div class="menu-shot"><img src="assets/img/orecchiette.jpeg" alt="Orecchiette"></div>
+        </div>
+      </div>
+    </section>
+
     <section id="menu" class="section">
       <div class="container">
         <header class="section-head center reveal">
           <span class="eyebrow">Le categorie</span>
-          <h2>Tradizione, mare, pasta fresca e dolci finali.</h2>
-          <p class="lead">Mantengo la pagina leggera e statica, ma con un impianto visivo piu solido e piu vicino all'identita del locale.</p>
+          <h2>Antipasti, primi, secondi e dolci in una composizione piu pulita e preziosa.</h2>
+          <p class="lead menu-section-intro">Titoli caldi, descrizioni leggere, prezzi sempre leggibili. Il nuovo layout lascia respirare ogni piatto e rende la pagina coerente con l'identita elegante della locanda.</p>
         </header>
 
         <div class="menu-grid" id="menuGrid"></div>
@@ -55,16 +98,16 @@
       <div class="container reservation-grid">
         <div class="surface-panel reservation-panel reveal">
           <span class="eyebrow">Prenotazioni</span>
-          <h2>Se il piatto convince, il passo dopo deve essere immediato.</h2>
-          <p>Per questo la chiusura della pagina menu porta subito all'azione: pochi elementi, ben scanditi, senza rumore.</p>
+          <h2>Quando il menu convince, il passo successivo deve essere semplice.</h2>
+          <p>La chiusura della pagina resta chiara e immediata: pochi elementi, call to action evidenti, un tono visivo coerente con il resto dell'esperienza.</p>
           <div class="reservation-notes">
             <div><strong>Telefono:</strong> +39 329 325 7911</div>
             <div><strong>Email:</strong> prenotazioni@lalocandadellelfo.it</div>
             <div><strong>Indirizzo:</strong> Strada dei Gesuiti, 28/30 - Bari</div>
           </div>
           <div class="cta-row">
-            <a class="btn btn-secondary" href="https://wa.me/393293257911" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn btn-primary" href="index.html#contatti">Vai ai contatti</a>
+            <a class="btn btn-primary" href="https://wa.me/393293257911" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-secondary" href="index.html#contatti">Vai ai contatti</a>
           </div>
         </div>
 
@@ -92,38 +135,38 @@
       const menuData = [
         {
           title: "Antipasti",
-          subtitle: "Aperture di tavola pensate per condividere e mettere subito il tono giusto.",
+          subtitle: "Piccoli inizi di mare e di terra, pensati per aprire la tavola con luce e carattere.",
           items: [
-            { name: "Bruschette", description: "Pane tostato, pomodoro e olio extravergine.", price: "8 EUR" },
-            { name: "Polpette", description: "Morbide, saporite, con cottura da cucina di casa.", price: "10 EUR" },
-            { name: "Verdure grigliate", description: "Selezione di stagione con condimento essenziale.", price: "12 EUR" }
+            { name: "Bruschette della casa", description: "Pane caldo, pomodoro maturo, olio extravergine e un tocco verde mediterraneo.", price: "8 EUR" },
+            { name: "Saute di cozze", description: "Profumo iodato, fondo saporito e una presentazione piu essenziale.", price: "12 EUR" },
+            { name: "Polpette artigianali", description: "Morbide, dorate, rassicuranti come un pranzo della domenica.", price: "10 EUR" }
           ]
         },
         {
           title: "Primi",
-          subtitle: "La parte piu identitaria del menu, tra tradizione barese e piatti di mare.",
+          subtitle: "La parte piu identitaria del percorso: pasta fresca, mare, consistenze e memoria barese.",
           items: [
-            { name: "Orecchiette alle cime di rapa", description: "Una firma pugliese netta e immediata.", price: "10 EUR" },
-            { name: "Lasagne al forno", description: "Stratificate, avvolgenti, da domenica lenta.", price: "12 EUR" },
-            { name: "Risotto allo zafferano", description: "Piu morbido e delicato, con profumo elegante.", price: "11 EUR" }
+            { name: "Orecchiette alle cime di rapa", description: "Amaro gentile, acciuga, pane croccante e gesto pugliese riconoscibile.", price: "12 EUR" },
+            { name: "Spaghetti all'assassina", description: "Croccanti, intensi, scuri al punto giusto, con la firma della cottura in padella.", price: "14 EUR" },
+            { name: "Spaghetti allo scoglio", description: "Cremosita di mare, crostacei e luce salmastra nel piatto.", price: "18 EUR" }
           ]
         },
         {
           title: "Secondi",
-          subtitle: "Carne e pesce con una presentazione piu pulita e piu contemporanea.",
+          subtitle: "Cotture pulite, materia in evidenza e una presenza piu elegante nel piatto.",
           items: [
-            { name: "Tagliata di manzo", description: "Cottura precisa e gusto pieno.", price: "19 EUR" },
-            { name: "Pesce fresco del giorno", description: "Disponibilita variabile secondo mercato.", price: "18 EUR" },
-            { name: "Pollo alla puttanesca", description: "Un piatto deciso, diretto, senza compromessi.", price: "14 EUR" }
+            { name: "Polpo alla griglia", description: "Esterno appena tostato, interno morbido e note mediterranee di brace.", price: "18 EUR" },
+            { name: "Pesce fresco del giorno", description: "Disponibilita variabile secondo mercato, lavorato con massima essenzialita.", price: "20 EUR" },
+            { name: "Scampi alla barese", description: "Dolcezza marina e finitura pulita per un secondo di carattere.", price: "22 EUR" }
           ]
         },
         {
           title: "Dolci",
-          subtitle: "Finale semplice, classico e rassicurante.",
+          subtitle: "Chiusure morbide, leggere e rassicuranti, con un tocco piu raffinato.",
           items: [
-            { name: "Tiramisu", description: "Cremoso e bilanciato.", price: "6 EUR" },
-            { name: "Panna cotta", description: "Morbida, fresca, essenziale.", price: "5 EUR" },
-            { name: "Gelato artigianale", description: "Perfetto per chiudere con leggerezza.", price: "5 EUR" }
+            { name: "Tiramisu della locanda", description: "Crema soffice, cacao delicato e un finale avvolgente.", price: "6 EUR" },
+            { name: "Panna cotta", description: "Morbida, fresca, minimale, servita con equilibrio.", price: "5 EUR" },
+            { name: "Dolce del giorno", description: "Una proposta variabile che segue stagione, ispirazione e disponibilita.", price: "6 EUR" }
           ]
         }
       ];
@@ -134,7 +177,7 @@
       menuData.forEach((section, sectionIndex) => {
         const article = document.createElement("article");
         article.className = "menu-card reveal";
-        if (sectionIndex % 2 === 1) article.classList.add("delay-1");
+        article.style.transitionDelay = `${sectionIndex * 120}ms`;
 
         const header = document.createElement("div");
         header.className = "menu-card-header";
@@ -152,7 +195,7 @@
 
         section.items.forEach((item) => {
           const row = document.createElement("div");
-          row.className = "menu-row";
+          row.className = "menu-row reveal";
 
           const dt = document.createElement("dt");
           const strong = document.createElement("strong");
@@ -163,6 +206,7 @@
           dt.appendChild(span);
 
           const dd = document.createElement("dd");
+          dd.className = "price";
           dd.textContent = item.price;
 
           row.appendChild(dt);
@@ -177,9 +221,9 @@
         grid.appendChild(article);
       });
 
-      requestAnimationFrame(() => {
-        grid.querySelectorAll(".menu-card").forEach((card) => card.classList.add("visible"));
-      });
+      if (window.__codexObserveReveals) {
+        window.__codexObserveReveals(grid);
+      }
     })();
   </script>
 </body>

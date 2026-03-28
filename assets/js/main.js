@@ -5,11 +5,22 @@ if (toggle && nav) {
   const openLabel = toggle.dataset.labelOpen || "Open menu";
   const closeLabel = toggle.dataset.labelClose || "Close menu";
 
-  toggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
+  const syncMenuState = (open) => {
+    nav.classList.toggle("open", open);
     toggle.classList.toggle("open", open);
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? closeLabel : openLabel);
+    document.body.classList.toggle("menu-open", open);
+  };
+
+  toggle.addEventListener("click", () => {
+    syncMenuState(!nav.classList.contains("open"));
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) {
+      syncMenuState(false);
+    }
   });
 }
 
@@ -24,12 +35,13 @@ for (const link of document.querySelectorAll('a[href^="#"]')) {
     event.preventDefault();
     target.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    if (nav) nav.classList.remove("open");
     if (toggle) {
       toggle.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", toggle.dataset.labelOpen || "Open menu");
     }
+    if (nav) nav.classList.remove("open");
+    document.body.classList.remove("menu-open");
   });
 }
 
@@ -60,13 +72,27 @@ if (slider) {
 }
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const revealTargets = document.querySelectorAll(".reveal, .reveal-img");
+const observedRevealTargets = new WeakSet();
+let revealObserver = null;
 
-if (revealTargets.length) {
+const revealNow = (root = document) => {
+  root.querySelectorAll(".reveal, .reveal-img").forEach((element) => {
+    element.classList.add("visible");
+  });
+};
+
+const observeReveals = (root = document) => {
+  const targets = root.querySelectorAll(".reveal, .reveal-img");
+
+  if (!targets.length) return;
+
   if (prefersReducedMotion) {
-    revealTargets.forEach((element) => element.classList.add("visible"));
-  } else {
-    const revealObserver = new IntersectionObserver(
+    revealNow(root);
+    return;
+  }
+
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
@@ -76,10 +102,17 @@ if (revealTargets.length) {
       },
       { threshold: 0.18 }
     );
-
-    revealTargets.forEach((element) => revealObserver.observe(element));
   }
-}
+
+  targets.forEach((element) => {
+    if (observedRevealTargets.has(element)) return;
+    observedRevealTargets.add(element);
+    revealObserver.observe(element);
+  });
+};
+
+observeReveals();
+window.__codexObserveReveals = observeReveals;
 
 (() => {
   const header = document.querySelector(".site-header");
@@ -91,6 +124,28 @@ if (revealTargets.length) {
 
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
+})();
+
+(() => {
+  if (prefersReducedMotion) return;
+
+  const parallaxItems = Array.from(document.querySelectorAll(".parallax-soft"));
+  if (!parallaxItems.length) return;
+
+  const updateParallax = () => {
+    const viewportHeight = window.innerHeight || 1;
+
+    parallaxItems.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      const progress = (rect.top + rect.height * 0.5 - viewportHeight * 0.5) / viewportHeight;
+      const offset = Math.max(-14, Math.min(14, progress * -14));
+      item.style.transform = `translate3d(0, ${offset}px, 0)`;
+    });
+  };
+
+  updateParallax();
+  window.addEventListener("scroll", updateParallax, { passive: true });
+  window.addEventListener("resize", updateParallax);
 })();
 
 (() => {
@@ -110,19 +165,19 @@ if (revealTargets.length) {
         {
           name: "Marta R.",
           designation: "5 stelle - ospite recente",
-          quote: "Assassina spettacolare, sala accogliente e un'atmosfera che invoglia a restare. Il sito ora rende molto meglio questa sensazione.",
+          quote: "Atmosfera calda, impiattamento curato e una sensazione di autenticita che resta dall'inizio alla fine.",
           src: "assets/img/people/image.png"
         },
         {
           name: "Dario A.",
           designation: "4 stelle - visita serale",
-          quote: "Cucina tipica barese fatta bene, servizio cordiale e piatti con carattere. La nuova presentazione visiva e piu curata e piu credibile.",
+          quote: "Cucina tipica barese fatta bene, servizio cordiale e un'identita visiva finalmente all'altezza del locale.",
           src: "assets/img/people/DA.jpeg"
         },
         {
           name: "Vito U.",
-          designation: "5 stelle - cliente soddisfatta",
-          quote: "Pasta fatta bene, prezzi chiari e una bella energia complessiva. Anche la sezione recensioni adesso sembra parte del brand.",
+          designation: "5 stelle - cliente soddisfatto",
+          quote: "Piatti chiari, atmosfera avvolgente e un sito che adesso trasmette davvero il carattere della locanda.",
           src: "assets/img/people/ubaldini.gif"
         }
       ]
@@ -130,19 +185,19 @@ if (revealTargets.length) {
         {
           name: "Marta R.",
           designation: "5 stars - recent guest",
-          quote: "Excellent assassina, welcoming room, and an atmosphere that makes you want to stay longer. The redesign captures that feeling much better.",
+          quote: "Warm atmosphere, thoughtful plating, and a strong sense of authenticity from the first course to the last.",
           src: "assets/img/people/image.png"
         },
         {
           name: "Dario A.",
           designation: "4 stars - evening visit",
-          quote: "Well-made Bari classics, friendly service, and dishes with real identity. The visual refresh now feels far more intentional.",
+          quote: "Well-made Bari classics, friendly service, and a visual identity that now matches the quality of the restaurant.",
           src: "assets/img/people/DA.jpeg"
         },
         {
           name: "Vito U.",
-          designation: "5 stars - happy customer",
-          quote: "Great handmade pasta, clear pricing, and a stronger sense of place. Even the reviews section now feels branded instead of generic.",
+          designation: "5 stars - happy guest",
+          quote: "Clear menu, inviting mood, and a website that finally feels aligned with the place itself.",
           src: "assets/img/people/ubaldini.gif"
         }
       ];
