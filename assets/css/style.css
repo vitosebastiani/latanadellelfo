@@ -461,14 +461,14 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2d5a45, #18382b);
+  background: rgba(241, 227, 190, 0.09);
+  border-color: rgba(241, 227, 190, 0.18);
   color: var(--accent-soft);
-  box-shadow: 0 16px 34px rgba(4, 16, 11, 0.28);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background: linear-gradient(135deg, #356850, #1d4333);
+  background: rgba(241, 227, 190, 0.14);
 }
 
 .btn-secondary {
@@ -483,9 +483,9 @@ p {
 }
 
 .btn-outline-green {
-  background: rgba(12, 26, 20, 0.42);
+  background: rgba(241, 227, 190, 0.09);
   border-color: rgba(241, 227, 190, 0.18);
-  color: var(--text);
+  color: var(--accent-soft);
 }
 
 .hero-stats {
@@ -1196,8 +1196,13 @@ p {
     --header-height-shrink: 68px;
   }
 
+  .site-header {
+    overflow: visible;
+  }
+
   .header-inner {
-    flex-wrap: wrap;
+    position: relative;
+    flex-wrap: nowrap;
   }
 
   .nav-toggle {
@@ -1210,6 +1215,10 @@ p {
   }
 
   .nav {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
     order: 4;
     width: 100%;
     margin-left: 0;
@@ -1224,7 +1233,7 @@ p {
     flex-direction: column;
     align-items: stretch;
     gap: 0.4rem;
-    margin-top: 0.6rem;
+    margin-top: 0;
     padding: 0.8rem;
     border-radius: var(--radius-lg);
     background: rgba(9, 20, 16, 0.92);
