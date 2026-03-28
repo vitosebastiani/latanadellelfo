@@ -1351,6 +1351,20 @@ p {
     margin-left: 0;
   }
 
+  .menu-link {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .lang-switch,
+  .menu-link {
+    min-width: 3.25rem;
+    min-height: 2.85rem;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.95rem;
+    line-height: 1;
+  }
+
   .nav {
     position: absolute;
     top: calc(100% + 0.5rem);
@@ -1369,17 +1383,23 @@ p {
   .nav ul {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.4rem;
+    gap: 0.45rem;
     margin-top: 0;
-    padding: 0.8rem;
+    padding: 0.7rem;
     border-radius: var(--radius-lg);
     background: rgba(9, 20, 16, 0.92);
     border: 1px solid var(--line);
   }
 
-  .nav a,
-  .lang-switch {
+  .nav a {
     justify-content: flex-start;
+    min-height: 3rem;
+    padding: 0.8rem 1rem;
+    border-radius: 16px;
+    background: rgba(245, 232, 199, 0.04);
+    font-size: 1rem;
+    line-height: 1.15;
+    white-space: normal;
   }
 
   .hero-copy h1,
