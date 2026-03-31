@@ -1,11 +1,11 @@
 :root {
   --bg: #0d221a;
   --bg-deep: #08150f;
-  --surface: rgba(19, 45, 35, 0.9);
-  --surface-2: rgba(25, 56, 44, 0.92);
-  --surface-3: rgba(31, 65, 52, 0.94);
-  --surface-soft: rgba(17, 40, 31, 0.82);
-  --surface-contrast: #16372c;
+  --surface: rgba(28, 58, 46, 0.9);
+  --surface-2: rgba(34, 70, 55, 0.92);
+  --surface-3: rgba(42, 80, 63, 0.94);
+  --surface-soft: rgba(25, 52, 41, 0.82);
+  --surface-contrast: #214b3b;
   --text: #f4ead1;
   --text-soft: #dbcfae;
   --muted: #c8bb97;
@@ -48,7 +48,7 @@ body {
     radial-gradient(circle at 15% 10%, rgba(199, 164, 104, 0.12), transparent 0 22rem),
     radial-gradient(circle at 82% 14%, rgba(111, 149, 126, 0.12), transparent 0 18rem),
     radial-gradient(circle at 50% 120%, rgba(216, 182, 132, 0.08), transparent 0 22rem),
-    linear-gradient(180deg, #10271e 0%, #0b1f17 35%, #091710 100%);
+    linear-gradient(180deg, #143126 0%, #10281f 35%, #0d1f18 100%);
   padding-top: var(--header-height);
 }
 
@@ -521,14 +521,19 @@ p {
 }
 
 .btn-primary {
-  background: rgba(241, 227, 190, 0.09);
-  border-color: rgba(241, 227, 190, 0.18);
-  color: var(--accent-soft);
+  background: linear-gradient(135deg, #d7bb77, #b78f49);
+  border-color: rgba(255, 236, 184, 0.28);
+  color: #13261d;
+  box-shadow: 0 14px 28px rgba(160, 122, 55, 0.22);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background: rgba(241, 227, 190, 0.14);
+  background: linear-gradient(135deg, #e2c98d, #c39b57);
+}
+
+.btn.btn-call {
+  color: #234634;
 }
 
 .btn-secondary {
