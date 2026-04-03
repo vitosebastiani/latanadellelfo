@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Logo elfo bianco</title>
+  <desc id="desc">Marchio illustrato di un elfo in bianco con sfondo trasparente, pensato per l'uso sul web.</desc>
+  <defs>
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#soft-glow)" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+    <path
+      d="M206 219c14-71 47-126 94-165 47 39 80 94 94 165-28-20-59-31-94-34-35 3-66 14-94 34Z"
+      fill="#ffffff"
+      fill-opacity="0.08"
+      stroke-width="14"/>
+    <path
+      d="M205 218c27-20 58-31 95-34 37 3 68 14 95 34"
+      stroke-width="13"/>
+    <path
+      d="M243 144c13-13 29-25 49-35"
+      stroke-width="10"
+      opacity="0.78"/>
+    <path
+      d="M357 144c-13-13-29-25-49-35"
+      stroke-width="10"
+      opacity="0.78"/>
+
+    <path
+      d="M228 272c0-71 28-109 72-109 44 0 72 38 72 109 0 66-31 126-72 126-41 0-72-60-72-126Z"
+      fill="#ffffff"
+      fill-opacity="0.05"
+      stroke-width="14"/>
+    <path
+      d="M228 251c-31 9-55 29-72 59 36-4 63-14 83-33"
+      fill="#ffffff"
+      fill-opacity="0.05"
+      stroke-width="12"/>
+    <path
+      d="M372 251c31 9 55 29 72 59-36-4-63-14-83-33"
+      fill="#ffffff"
+      fill-opacity="0.05"
+      stroke-width="12"/>
+
+    <path
+      d="M255 242c-10 22-15 46-15 72 12-13 25-24 41-31"
+      stroke-width="10"
+      opacity="0.82"/>
+    <path
+      d="M345 242c10 22 15 46 15 72-12-13-25-24-41-31"
+      stroke-width="10"
+      opacity="0.82"/>
+
+    <path
+      d="M268 279c10-9 20-14 31-14"
+      stroke-width="10"/>
+    <path
+      d="M301 265c11 0 21 5 31 14"
+      stroke-width="10"/>
+    <path
+      d="M300 276c-8 17-10 35-5 49 4 11 12 16 24 14"
+      stroke-width="9"
+      opacity="0.92"/>
+    <path
+      d="M269 332c22 22 40 22 62 0"
+      stroke-width="10"/>
+
+    <path
+      d="M217 462c29-44 60-66 83-66 23 0 54 22 83 66"
+      fill="#ffffff"
+      fill-opacity="0.04"
+      stroke-width="14"/>
+    <path
+      d="M176 474c40 40 81 61 124 63 43-2 84-23 124-63"
+      stroke-width="11"
+      opacity="0.72"/>
+    <path
+      d="M225 452l28 31"
+      stroke-width="10"
+      opacity="0.68"/>
+    <path
+      d="M375 452l-28 31"
+      stroke-width="10"
+      opacity="0.68"/>
+
+    <circle cx="219" cy="116" r="5" fill="#ffffff" stroke="none"/>
+    <circle cx="381" cy="116" r="5" fill="#ffffff" stroke="none"/>
+    <circle cx="300" cy="78" r="6" fill="#ffffff" stroke="none"/>
+    <path
+      d="M300 42v18"
+      stroke-width="8"
+      opacity="0.76"/>
+    <path
+      d="M271 61l12 10"
+      stroke-width="7"
+      opacity="0.68"/>
+    <path
+      d="M329 61l-12 10"
+      stroke-width="7"
+      opacity="0.68"/>
+  </g>
+</svg>

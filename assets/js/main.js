@@ -1,6 +1,31 @@
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#nav");
 
+(() => {
+  const buttons = Array.from(document.querySelectorAll(".btn"));
+  if (!buttons.length) return;
+
+  buttons.forEach((button) => {
+    const label = button.textContent.replace(/\s+/g, " ").trim();
+    if (!label) return;
+
+    if (!button.dataset.hover) {
+      button.dataset.hover = label;
+    }
+
+    if (button.querySelector(".btn-text")) return;
+
+    const wrapper = document.createElement("span");
+    wrapper.className = "btn-text";
+
+    while (button.firstChild) {
+      wrapper.appendChild(button.firstChild);
+    }
+
+    button.appendChild(wrapper);
+  });
+})();
+
 if (toggle && nav) {
   const openLabel = toggle.dataset.labelOpen || "Open menu";
   const closeLabel = toggle.dataset.labelClose || "Close menu";
@@ -75,17 +100,23 @@ for (const link of document.querySelectorAll('a[href^="#"]')) {
   const updateActiveSection = () => {
     const scrollBottom = window.scrollY + window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
+    const headerOffset = document.querySelector(".site-header")?.offsetHeight || 0;
 
     if (documentHeight - scrollBottom <= 24) {
       setActive(sections[sections.length - 1].id);
       return;
     }
 
-    const marker = window.innerHeight * 0.38;
+    const marker = Math.max(headerOffset + 24, window.innerHeight * 0.34);
     let current = sections[0].id;
 
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
+      if (rect.top <= marker && rect.bottom > marker) {
+        current = section.id;
+        return;
+      }
+
       if (rect.top <= marker) {
         current = section.id;
       }
@@ -126,7 +157,82 @@ if (slider) {
   }
 }
 
+const heroSlider = document.getElementById("heroSlider");
+if (heroSlider) {
+  const heroSlides = Array.from(heroSlider.querySelectorAll(".rebel-hero-slide"));
+  let heroIndex = heroSlides.findIndex((slide) => slide.classList.contains("is-active"));
+  if (heroIndex < 0) heroIndex = 0;
+
+  const showHero = (nextIndex) => {
+    heroIndex = nextIndex;
+    heroSlides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === heroIndex);
+    });
+  };
+
+  if (heroSlides.length > 1) {
+    window.setInterval(() => {
+      showHero((heroIndex + 1) % heroSlides.length);
+    }, 5200);
+  } else if (heroSlides.length === 1) {
+    showHero(0);
+  }
+}
+
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const heroTextSlider = document.getElementById("heroTextSlider");
+if (heroTextSlider) {
+  const textSlides = Array.from(heroTextSlider.querySelectorAll(".rebel-text-slide"));
+  let textIndex = textSlides.findIndex((slide) => slide.classList.contains("is-active"));
+  if (textIndex < 0) textIndex = 0;
+
+  const updateTextHeight = () => {
+    const maxHeight = textSlides.reduce((height, slide) => Math.max(height, slide.offsetHeight), 0);
+    if (maxHeight > 0) {
+      heroTextSlider.style.minHeight = `${maxHeight}px`;
+    }
+  };
+
+  const showTextSlide = (nextIndex) => {
+    const currentSlide = textSlides[textIndex];
+    const nextSlide = textSlides[nextIndex];
+
+    if (!currentSlide || !nextSlide || currentSlide === nextSlide) return;
+
+    currentSlide.classList.remove("is-active");
+    currentSlide.classList.add("is-leaving");
+    nextSlide.classList.remove("is-leaving");
+    nextSlide.classList.add("is-active");
+
+    window.setTimeout(() => {
+      currentSlide.classList.remove("is-leaving");
+    }, 900);
+
+    textIndex = nextIndex;
+  };
+
+  updateTextHeight();
+  window.addEventListener("resize", updateTextHeight);
+
+  if (!prefersReducedMotion && textSlides[textIndex]) {
+    const initialSlide = textSlides[textIndex];
+    initialSlide.classList.remove("is-active");
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        initialSlide.classList.add("is-active");
+      });
+    });
+  }
+
+  if (textSlides.length > 1) {
+    window.setInterval(() => {
+      showTextSlide((textIndex + 1) % textSlides.length);
+    }, prefersReducedMotion ? 5000 : 3200);
+  }
+}
+
 const observedRevealTargets = new WeakSet();
 let revealObserver = null;
 

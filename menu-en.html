@@ -8,17 +8,18 @@
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Fraunces:opsz,wght@9..144,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="home-rebel menu-page">
   <a class="skip-link" href="#content">Skip to content</a>
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="index-en.html" aria-label="La Locanda dell'Elfo home">
-        <img class="brand-logo" src="assets/img/logo.jpg" alt="La Locanda dell'Elfo logo" width="48" height="48">
-        <span class="brand-name">La Locanda dell'Elfo</span>
+      <a class="mobile-brand" href="index-en.html">La Locanda dell'Elfo</a>
+      <a class="brand desktop-brand" href="index-en.html" aria-label="La Locanda dell'Elfo">
+        <img class="brand-logo" src="assets/img/logo3.png" alt="La Locanda dell'Elfo">
+        <span class="brand-name">LA LOCANDA<br>DELL'ELFO</span>
       </a>
 
       <button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu">
@@ -30,16 +31,46 @@
       <nav id="nav" class="nav" aria-label="Main navigation">
         <ul>
           <li><a href="index-en.html">Home</a></li>
+          <li><a class="is-active" href="#menu">Menu</a></li>
           <li><a href="#booking">Book</a></li>
+          <li><a href="menu.html">IT</a></li>
         </ul>
       </nav>
-
-      <a class="lang-switch menu-link is-active is-disabled" href="#menu" aria-disabled="true" tabindex="-1">Menu</a>
-      <a class="lang-switch" href="menu.html" aria-label="Passa alla versione italiana">IT</a>
     </div>
   </header>
 
   <main id="content">
+    <section class="section menu-hero">
+      <div class="container menu-hero-shell">
+        <div class="menu-hero-copy reveal">
+          <span class="eyebrow">La Locanda Menu</span>
+          <h1>Real dishes. Bari on the table.</h1>
+          <p>Starters, pasta, mains, and desserts shaped to express Bari cooking with a clearer presentation and a visual tone aligned with the rest of the site.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:+393293257911">Book now</a>
+            <a class="btn btn-secondary" href="index-en.html#contact">Go to contact</a>
+          </div>
+          <div class="menu-signals">
+            <div class="menu-signal">
+              <strong>Apulian cooking</strong>
+              <p>Local ingredients, regional pasta, seafood, grill, and a menu designed to feel easy to read and easy to want.</p>
+            </div>
+            <div class="menu-signal">
+              <strong>Old Bari mood</strong>
+              <p>A menu page meant to feel like part of the restaurant, not a detached list.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-hero-visual reveal-img">
+          <img src="assets/img/antipasti.png" alt="Starters from La Locanda dell'Elfo">
+          <div class="menu-hero-note">
+            <strong>Tradition and sea</strong>
+            <span>A menu page brought in line with the new visual identity of the restaurant.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <section id="menu" class="section">
@@ -63,29 +94,40 @@
           <div class="reservation-notes">
             <div><strong>Phone:</strong> +39 329 325 7911</div>
             <div><strong>Email:</strong> prenotazioni@lalocandadellelfo.it</div>
-            <div><strong>Address:</strong> Strada dei Gesuiti, 28/30 - Bari</div>
+            <div><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Strada%20dei%20Gesuiti%2028%2F30%2C%20Bari" target="_blank" rel="noopener">Strada dei Gesuiti, 28/30 - Bari</a></div>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://wa.me/393293257911" target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn btn-secondary" href="index-en.html#contact">Go to contact</a>
+            <a class="btn btn-outline-green" href="https://www.google.com/maps/search/?api=1&query=Strada%20dei%20Gesuiti%2028%2F30%2C%20Bari" target="_blank" rel="noopener">Open Google Maps</a>
           </div>
         </div>
 
         <div class="map-card reveal-img delay-1">
-          <iframe title="Map to La Locanda dell'Elfo" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Strada%20dei%20Gesuiti%2028%20Bari&output=embed" allowfullscreen></iframe>
+          <iframe title="Map to La Locanda dell'Elfo" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Strada%20dei%20Gesuiti%2028%2F30%2C%20Bari&output=embed" allowfullscreen></iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> La Locanda dell'Elfo - Strada dei Gesuiti 28/30 - Bari</p>
-      <ul class="social">
-        <li><a href="https://instagram.com/lalocandadellelfo" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://facebook.com/lalocandadellelfo" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="https://tiktok.com/@lalocandadellelfo" target="_blank" rel="noopener">TikTok</a></li>
-      </ul>
+  <footer class="site-footer rebel-footer">
+    <div class="container rebel-footer-top">
+      <div>
+        <p class="rebel-footer-line">call us: <a href="tel:+393293257911">+39 329 325 7911</a> <a href="mailto:info@lalocandadellelfo.com">info@lalocandadellelfo.com</a></p>
+        <a class="btn btn-secondary" href="index-en.html#contact">Go to contact</a>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="rebel-footer-nav">
+          <li><a href="index-en.html">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#booking">Book</a></li>
+          <li><a href="index-en.html#story">Story</a></li>
+          <li><a href="index-en.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container rebel-footer-bottom">
+      <p>Copyright &copy; <span id="year"></span> La Locanda dell'Elfo</p>
     </div>
   </footer>
 

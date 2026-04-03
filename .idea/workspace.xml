@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1ec9649-4fae-4d6d-bb21-ce71b8642742" name="Changes" comment="change menu layer in mobile version" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="42" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vitosebastiani&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vitosebastiani/latanadellelfo.git&quot;,
+    &quot;accountId&quot;: &quot;af776840-427e-47c1-ab22-9bd30942d534&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3BaJTtGr1AP2LBRxq8Bc9lWZWwS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vito.sebastiani/Downloads/la-locanda-dell-elfo-v3-frontend-skill/la-locanda-dell-elfo-v2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1ec9649-4fae-4d6d-bb21-ce71b8642742" name="Changes" comment="" />
+      <created>1774721258697</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774721258697</updated>
+      <workItem from="1774721259996" duration="19208000" />
+      <workItem from="1775037029015" duration="356000" />
+      <workItem from="1775037762649" duration="784000" />
+    </task>
+    <task id="LOCAL-00001" summary="change color palette">
+      <option name="closed" value="true" />
+      <created>1774722864553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774722864553</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change color palette">
+      <option name="closed" value="true" />
+      <created>1774723159648</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774723159648</updated>
+    </task>
+    <task id="LOCAL-00003" summary="english menu">
+      <option name="closed" value="true" />
+      <created>1774723427981</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774723427981</updated>
+    </task>
+    <task id="LOCAL-00004" summary="english menu">
+      <option name="closed" value="true" />
+      <created>1774724260277</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1774724260279</updated>
+    </task>
+    <task id="LOCAL-00005" summary="english menu">
+      <option name="closed" value="true" />
+      <created>1774724497247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774724497247</updated>
+    </task>
+    <task id="LOCAL-00006" summary="english menu">
+      <option name="closed" value="true" />
+      <created>1774724545924</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774724545924</updated>
+    </task>
+    <task id="LOCAL-00007" summary="change menu">
+      <option name="closed" value="true" />
+      <created>1774725519141</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1774725519141</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change menu style">
+      <option name="closed" value="true" />
+      <created>1774725760339</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1774725760339</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change menu style">
+      <option name="closed" value="true" />
+      <created>1774726269714</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1774726269714</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change text">
+      <option name="closed" value="true" />
+      <created>1774727094643</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1774727094644</updated>
+    </task>
+    <task id="LOCAL-00011" summary="change some images">
+      <option name="closed" value="true" />
+      <created>1774728038480</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1774728038480</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add images">
+      <option name="closed" value="true" />
+      <created>1774728137721</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1774728137721</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add images">
+      <option name="closed" value="true" />
+      <created>1774731340358</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1774731340358</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add images">
+      <option name="closed" value="true" />
+      <created>1774950316514</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1774950316514</updated>
+    </task>
+    <task id="LOCAL-00015" summary="change menu layer in mobile version">
+      <option name="closed" value="true" />
+      <created>1775037947264</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1775037947265</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change color palette" />
+    <MESSAGE value="english menu" />
+    <MESSAGE value="change menu" />
+    <MESSAGE value="change menu style" />
+    <MESSAGE value="change text" />
+    <MESSAGE value="change some images" />
+    <MESSAGE value="add images" />
+    <MESSAGE value="change menu layer in mobile version" />
+    <option name="LAST_COMMIT_MESSAGE" value="change menu layer in mobile version" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
