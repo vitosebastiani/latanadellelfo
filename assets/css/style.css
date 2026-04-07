@@ -270,12 +270,7 @@ p {
   height: 3rem;
   object-fit: cover;
   border-radius: 50%;
-  border: 1px solid rgba(248, 237, 204, 0.32);
-  box-shadow: var(--shadow-sm);
-}
-
-.brand-name {
-  font-size: 1.12rem;
+    border: 1px solid rgba(0, 0, 0, 0.45);
   color: var(--accent-soft);
   letter-spacing: 0.08em;
 }
@@ -411,18 +406,19 @@ p {
   }
 
   .desktop-brand .brand-logo {
-    width: auto;
+    width: 6.45rem;
     height: 6.45rem;
     display: block;
-    margin-right: -2.35rem;
-    border-radius: 0;
-    border: 0;
-    box-shadow: none;
-    object-fit: contain;
-    transition: height 0.25s ease;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    box-shadow: var(--shadow-sm);
+    object-fit: cover;
+    transition: width 0.25s ease, height 0.25s ease;
   }
 
   .site-header.is-shrink .desktop-brand .brand-logo {
+    width: 5.45rem;
     height: 5.45rem;
   }
 
@@ -1745,6 +1741,12 @@ p {
   .footer-inner {
     align-items: flex-start;
   }
+
+  .rebel-hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(5, 8, 6, 0.4) 0%, rgba(5, 8, 6, 0.6) 36%, rgba(5, 8, 6, 0.9) 100%),
+      linear-gradient(90deg, rgba(7, 11, 9, 0.8) 0%, rgba(7, 11, 9, 0.25) 60%, rgba(7, 11, 9, 0.7) 100%);
+  }
 }
 
 @media (max-width: 640px) {
@@ -1853,7 +1855,7 @@ p {
   position: relative;
   min-height: calc(100vh - var(--header-height));
   display: none;
-  align-items: flex-end;
+  align-items: center;
   background-size: cover;
   background-position: center;
 }
@@ -1880,7 +1882,7 @@ p {
   z-index: 1;
   width: 100%;
   padding: 6rem 0 5rem;
-  transform: translate(5.35rem, -8.35rem);
+  transform: translateX(5.35rem);
 }
 
 .rebel-title-slider h1,
@@ -2152,8 +2154,8 @@ p {
 
 @media (max-width: 640px) {
   .rebel-hero-content {
-    padding: 5rem 0 3rem;
-    transform: translate(1.45rem, -3.8rem);
+    padding: 6rem 0 3rem;
+    transform: translateX(1.45rem);
   }
 
   .rebel-title-slider h1,
@@ -2173,3 +2175,4 @@ p {
     min-height: 18rem;
   }
 }
+
